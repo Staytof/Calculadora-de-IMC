@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de IMC</title>
+</head>
+
+<body>
+    <section>
+        <div id="bkg">
+            <img src="wave.png" alt="">
+        </div>
+
+        <div id="slide">
+            <img class="f1" src="bg1.png" alt="">
+            <img class="f2" src="bg2.png" alt="">
+            <img class="f3" src="bg3.png" alt="">
+            <img class="f4" src="bg4.png" alt="">
+        </div>
+
+        <div id="form">
+            <div id="box">
+                <div id="itens">
+                    <span>Insira sua altura:</span><br>
+                    <input type="number" name="" id="alt" onchange="formatarNumeroA()" placeholder="0,00"><br><br>
+                    <span>Insira seu peso:</span><br>
+                    <input type="number" name="" id="pes" onchange="formatarNumeroP()" placeholder="kg."><br><br><br>
+                    <input type="button" value="Calcular" id="consultar" onclick="consultar()">
+                </div>
+            </div>
+
+            <div id="arrows" onclick="consultar()">
+                <ion-icon name="caret-down-outline" id="arrow1"></ion-icon>
+                <ion-icon name="caret-down-outline" id="arrow2"></ion-icon>
+                <ion-icon name="caret-down-outline" id="arrow3"></ion-icon>
+                <ion-icon name="caret-down-outline" id="arrow4"></ion-icon>
+                <ion-icon name="caret-down-outline" id="arrow5"></ion-icon>
+            </div>
+
+            <div id="res">
+                <span id="blue"></span>
+                <span id="green"></span>
+                <span id="yellow"></span>
+                <span id="orange"></span>
+                <span id="red"></span>
+            </div>
+
+            <div id="boxres" onclick="consultar()">
+                <div id="peso1">
+                    <h3>Você está: <span style="font-size: 18px; color: #00afee;">Abaixo do Peso</span></h3>
+                    <br>
+                    <p>
+                        Estar abaixo do peso ideal pode ser mais perigoso à saúde do que a obesidade, independentemente
+                        de outros fatores de risco, como tabagismo, consumo excessivo de álcool e drogas ou doenças
+                        terminais. <br><br> É o que concluiu uma nova pesquisa do Hospital St. Michael’s, no Canadá,
+                        publicada
+                        nesta sexta-feira no periódico Journal of Epidemiology and Public Health.
+                        <br>
+                        <br>
+                        Especialistas calculam se uma pessoa está abaixo ou acima de seu peso ideal a partir do índice
+                        de massa corporal (IMC), uma relação entre o peso e a altura de cada paciente. Pessoas com IMC
+                        menor do que 18,5 são consideradas como abaixo do peso ideal; com IMC de 25 a 30, com sobrepeso;
+                        e com IMC acima de 30, como obesas. O IMC estipulado como adequado é de 18,5 a 25.
+                    </p>
+                    <b>Matéria completa no</b> <a
+                        href="https://veja.abril.com.br/saude/estar-abaixo-do-peso-eleva-risco-de-vida-mais-do-que-obesidade/"
+                        target="_blank" rel="noopener noreferrer"><img src="veja.png" width="50px" alt=""></a>
+                </div>
+
+                <div id="peso2">
+                    <br><br><br><br><br><br>
+                    <h3>Você está no: <span style="color: #0aff7d; font-size: 18px;">Peso normal</span></h3>
+                    <br>
+                    <p>
+                    <ul>
+                        <li>
+                            Beba bastante água;
+                        </li>
+                        <li>
+                            Mantenha uma alimentação saudável;
+                        </li>
+                        <li>
+                            Cuide bem do seu sono;
+                        </li>
+                        <li>
+                            Faça exercícios físicos regularmente;
+                        </li>
+                        <li>
+                            Descanse e se distraia;
+                        </li>
+                        <li>
+                            Limite o tempo na frente das telas;
+                        </li>
+                        <li>
+                            Mantenha relações saudáveis;
+                        </li>
+                        <li>
+                            E faça consultas periódicas, você é importante! 💚
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div id="peso3">
+                    <h3>Você está no: <span style="color: #f5e035; font-size: 18px;">Sobrepeso / Obesidade (grau
+                            1)</span></h3>
+                    <p>
+                        Sobrepeso e Obesidade implicam uma condição de excesso de peso em um ser humano. O termo
+                        Sobrepeso é geralmente usado para indicar o excesso de peso enquanto Obeso se refere a excesso
+                        de gordura.
+                        <br>
+                        <br>
+                        Estar com sobrepeso quer dizer ter mais peso do que é considerado normal ou saudável para a
+                        idade ou tamanho. Por outro lado, Obesidade é a condição de ser obeso, por exemplo, quantidade
+                        de gordura em excesso no corpo. Apesar de uma pessoa com sobrepeso carregar excesso de peso, ela
+                        pode ter ou não acúmulo excessivo de gordura.
+                    </p>
+                    <i>Matéria completa no </i> <a
+                        href="https://www.mundoboaforma.com.br/sobrepeso-e-obesidade-qual-diferenca/" target="_blank"
+                        rel="noopener noreferrer"><img src="mundo.webp" alt="Mundo Boa Forma logo"></a>
+                </div>
+
+                <div id="peso4">
+                    <h3>Você está no: <span style="color: #fd9a08; font-size: 18px;">Sobrepeso / Obesidade (grau
+                            2)</span></h3>
+                    <p>
+                        O 2 grau de obesidade corresponde ao IMC 35 a 39,9. Neste caso, a pessoa já está bem acima do
+                        peso e pode, inclusive, já apresentar sintomas de doenças relacionas em decorrência da
+                        obesidade.
+                        <br>
+                        Talvez agora esteja se perguntando, nestes casos, como fazer para retornar aos estágios
+                        anteriores de obesidade?
+                        <br>
+                        <br>
+                        Você precisará fazer uma dieta alimentar rigorosa, com o acompanhamento de um nutricionista e
+                        consultar um médico especialista (endócrino). Também, uma rotina de exercícios intensos,
+                        provavelmente aeróbicos (para emagrecer).
+                    </p>
+                    <i>Matéria completa no </i> <a
+                        href="http://bariatricaflorianopolis.com.br/os-5-graus-de-obesidade-e-os-tratamentos-correspondentes/"
+                        target="_blank" rel="noopener noreferrer"><img src="bariatrica.png" alt="Bariatrica Logo"></a>
+                </div>
+
+                <div id="peso5">
+                    <h3>Você está no: <span style="color: #d44503; font-size: 18px;">Sobrepeso / Obesidade (grau
+                            3)</span></h3>
+                    <p>
+                        O último grau de obesidade é o 3, e acredite, nesta fase sua força de vontade tem de ser
+                        absurda. Dependendo das suas condições, é provável que receba a orientação de realizar uma
+                        cirurgia.
+                        <br><br>
+                        Mesmo que difícil a reversão da obesidade grau 3, um tratamento adequado pode solucionar ou
+                        diminuir, conseguindo chegar até o sobrepeso.
+                        <br><br>
+                        Dentre as opções de cirurgias para a obesidade estão as restritivas (Banda Gástrica e
+                        Gastroplastica Vertical), e as mistas, as quais ao mesmo tempo restringem os alimentos ingeridos
+                        e também restringe a absorção do organismo dos alimentos ingeridos (Cirurgia Fobi-Capella,
+                        Derivação Duodenal e Scopinaro).
+                    </p>
+                    <i>Matéria completa no </i> <a
+                        href="http://bariatricaflorianopolis.com.br/os-5-graus-de-obesidade-e-os-tratamentos-correspondentes/"
+                        target="_blank" rel="noopener noreferrer"><img src="bariatrica.png" alt="Bariatrica Logo"></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="about">
+            <b>© Gabriel Santos Dias</b>
+            <a href="https://www.linkedin.com/in/gabriel-santos-dias-25b81a186/" target="_blank"
+                rel="noopener noreferrer">
+                <img src="linklogo.png" alt=""></a>
+
+            <a href="https://github.com/Staytof" target="_blank" rel="noopener noreferrer"><img src="ghl.png"
+                    alt=""></a>
+        </div>
+
+    </section>
+
+
+</body>
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+</script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>

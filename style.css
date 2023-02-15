@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#box {
+    position: absolute;
+    top: 111px;
+    text-align: center;
+    width: 370px;
+    height: 320px;
+    right: 211px;
+    background-color: #c2f164;
+    border-radius: 20px;
+    z-index: 2;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.174);
+}
+
+#itens {
+    position: relative;
+    top: 64px;
+}
+
+input {
+    text-align: center;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+
+    -webkit-appearance: none;
+    margin: 0;
+
+
+}
+
+#itens input {
+    border: none;
+    border-radius: 17px;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+}
+
+#bkg img {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+span {
+    color: white;
+    font-size: 23px;
+}
+
+#consultar {
+    border: none;
+    font-size: 16px;
+    width: 110px;
+    height: 40px;
+    border-radius: 24px;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+#consultar:hover {
+    width: 100px;
+    height: 35px;
+    transform: scale(1.1);
+    transition: .5s;
+    color: white;
+    background-color: rgba(28, 163, 42, 0.778);
+    font-size: 0px;
+    background-image: url(imgs/lupa.png);
+    background-repeat: no-repeat;
+    background-position: 28px;
+    background-size: 50px;
+}
+
+#slide img {
+    transition: 2.0s;
+    position: absolute;
+    opacity: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+#slide .f1 {
+    opacity: 1;
+}
+
+/*Seta indicadora*/
+
+#arrow1 {
+    display: none;
+    position: absolute;
+    top: 466px;
+    right: 477px;
+    font-size: 26px;
+    z-index: 2;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
+}
+
+#arrow2 {
+    display: none;
+    position: absolute;
+    top: 465px;
+    right: 429px;
+    font-size: 26px;
+    z-index: 2;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
+}
+
+#arrow3 {
+    display: none;
+    position: absolute;
+    top: 465px;
+    right: 378px;
+    font-size: 26px;
+    z-index: 2;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
+}
+
+#arrow4 {
+    display: none;
+    position: absolute;
+    top: 465px;
+    right: 325px;
+    font-size: 26px;
+    z-index: 2;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
+}
+
+#arrow5 {
+    display: none;
+    position: absolute;
+    top: 465px;
+    right: 275px;
+    font-size: 26px;
+    z-index: 2;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*Resultados / Indicadores*/
+
+#res {
+    border: 1px solid transparent;
+    border-radius: 15px;
+    position: absolute;
+    background-color: #c2f164;
+    width: 261px;
+    height: 30px;
+    right: 260px;
+    top: 490px;
+    z-index: 1;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.089);
+}
+
+#res #blue {
+    width: 51px;
+    height: 28px;
+    position: absolute;
+    background-color: #00afee;
+    border: 1px solid transparent;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#res #green {
+    width: 51px;
+    height: 28px;
+    position: absolute;
+    right: 156px;
+    background-color: #00a74f;
+}
+
+#res #yellow {
+    width: 51px;
+    height: 28px;
+    position: absolute;
+    right: 104px;
+    background-color: #f5e035;
+}
+
+#res #orange {
+    width: 51px;
+    height: 28px;
+    position: absolute;
+    right: 52px;
+    background-color: #fd9a08;
+}
+
+#res #red {
+    width: 51px;
+    height: 28px;
+    position: absolute;
+    right: 0px;
+    background-color: #d44503;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+/*Caixa de resultado */
+
+
+#boxres {
+    display: none;
+    color: white;
+    position: absolute;
+    border-radius: 20px;
+    background-color: #000000b8;
+    width: 530px;
+    height: 507px;
+    top: 111px;
+    left: 301px;
+    z-index: 1;
+}
+
+/*Abaixo do peso*/
+
+#peso1 {
+    display: none;
+}
+
+#peso1 h3 {
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+#peso1 p {
+    position: relative;
+    top: 56px;
+    right: -50px;
+    width: 430px;
+}
+
+#peso1 b {
+    position: relative;
+    top: 84px;
+    right: -135px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#peso1 img {
+    position: absolute;
+    top: 448px;
+    right: 146px;
+    cursor: pointer;
+}
+
+/*Peso Normal*/
+
+#peso2 {
+    display: none;
+}
+
+#peso2 h3 {
+    position: relative;
+    top: -20px;
+    text-align: center;
+}
+
+#peso2 p {
+    position: relative;
+    top: 56px;
+    right: -50px;
+    width: 430px;
+}
+
+#peso2 ul li {
+    position: relative;
+    top: -13px;
+    right: -50px;
+    margin: 15px;
+}
+
+/*Sobrepeso / Obesidade grau 1*/
+
+#peso3 {
+    display: none;
+}
+
+#peso3 h3 {
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+#peso3 p {
+    position: relative;
+    top: 96px;
+    right: -50px;
+    width: 430px;
+}
+
+#peso3 i {
+    position: absolute;
+    top: 413px;
+    right: 232px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#peso3 img {
+    position: absolute;
+    width: 100px;
+    top: 407px;
+    right: 121px;
+    cursor: pointer;
+}
+
+/*Obesidade grau 2*/
+
+#peso4 {
+    display: none;
+}
+
+#peso4 h3 {
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+#peso4 p {
+    position: relative;
+    top: 96px;
+    right: -50px;
+    width: 430px;
+}
+
+#peso4 i {
+    position: absolute;
+    top: 413px;
+    right: 188px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#peso4 img {
+    position: absolute;
+    width: 29px;
+    top: 387px;
+    right: 147px;
+    cursor: pointer;
+}
+
+/*Obesidade grau 3*/
+
+#peso5 {
+    display: none;
+}
+
+#peso5 h3 {
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+#peso5 p {
+    position: relative;
+    top: 96px;
+    right: -50px;
+    width: 430px;
+}
+
+#peso5 i {
+    position: absolute;
+    top: 446px;
+    right: 188px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#peso5 img {
+    position: absolute;
+    width: 29px;
+    top: 421px;
+    right: 147px;
+    cursor: pointer;
+}
+
+#about {
+    margin: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#about b {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+#about img {
+    width: 25px;
+}
