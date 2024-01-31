@@ -244,7 +244,7 @@ span {
     height: 507px;
     top: 111px;
     left: 301px;
-    margin-left: 40px;
+    padding-left: 40px;
     z-index: 1;
 }
 
